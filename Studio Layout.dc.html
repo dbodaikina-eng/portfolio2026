@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;1,700&amp;family=Cutive+Mono&amp;display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;height:100%;background:#d0491a;font-family:'Cutive Mono',ui-monospace,monospace;}
+  *{box-sizing:border-box;}
+  h1,h2,h3,h4,h5,h6{font-family:'Archivo',sans-serif;font-weight:700;}
+  .scrollcol::-webkit-scrollbar{width:8px;}
+  .scrollcol::-webkit-scrollbar-track{background:transparent;}
+  .scrollcol::-webkit-scrollbar-thumb{background:#8a8a86;border-radius:8px;}
+  .scrollcol{scrollbar-width:thin;scrollbar-color:#8a8a86 transparent;}
+  @media (hover:hover) and (pointer:fine){ *{cursor:none !important;} }
+  html[data-whale-off] *{cursor:auto !important;}
+  html[data-whale-off] #om-whale{display:none !important;}
+  @media (hover:none),(pointer:coarse){ #om-whale{display:none !important;} }
+</style>
+<script src="./image-slot.js"></script>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#d0491a"></rect><rect x="30" y="30" width="24" height="40" fill="#f2efe9"></rect><rect x="58" y="30" width="12" height="40" fill="#f2efe9"></rect></svg></template>
+</helmet>
+
+<div style="position:fixed;inset:0;display:flex;background:#f2efe9;border:6px solid #d0491a;overflow:hidden;font-family:'Cutive Mono',ui-monospace,monospace;color:#111318;">
+
+  <div id="om-whale" ref="{{ whaleRef }}" aria-hidden="true" style="position:fixed;top:0;left:0;z-index:9999;pointer-events:none;will-change:transform;">
+    <div ref="{{ innerRef }}" style="position:relative;width:76px;height:61px;will-change:transform;filter:drop-shadow(0 3px 5px rgba(20,40,55,.28));">
+      <img src="assets/whale-tail.png" alt="" ref="{{ tailRef }}" style="position:absolute;inset:0;width:100%;height:100%;transform-origin:66.3% 35.5%;will-change:transform;">
+      <img src="assets/whale-body.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;">
+    </div>
+  </div>
+
+  <!-- ===================== LEFT — scrollable ===================== -->
+  <div class="scrollcol" style="flex:1 1 auto;min-width:0;height:100%;overflow-y:auto;overflow-x:hidden;position:relative;">
+
+    <!-- hero -->
+    <section style="min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(28px,3.5vw,56px) clamp(28px,4vw,56px) clamp(24px,3vw,44px);">
+      <div style="font-family:'Archivo',sans-serif;font-style:italic;font-weight:700;font-size:16px;color:#26261f;">About</div>
+      <h1 style="margin:0;font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(38px,6.4vw,132px);line-height:.92;letter-spacing:-0.01em;">Senior product designer</h1>
+    </section>
+
+    <!-- APPROACH -->
+    <section style="border-top:1px solid rgba(0,0,0,.35);display:grid;grid-template-columns:clamp(80px,9vw,120px) 1fr;gap:clamp(20px,3vw,44px);padding:clamp(22px,2.4vw,32px) clamp(28px,4vw,56px) clamp(28px,3vw,44px);">
+      <div style="font-size:11px;letter-spacing:.08em;color:#26261f;padding-top:4px;">SHOWREEL</div>
+      <div style="display:flex;flex-direction:column;gap:clamp(24px,3vw,44px);">
+        <img src="assets/showreel.gif" alt="Showreel — design before AI era" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;">
+
+
+        <p style="margin:0;max-width:820px;font-size:clamp(14px,1.15vw,17px);line-height:1.45;">Most of my recent work is under NDA, so I use selected older cases not as a gallery of current UI trends, but as evidence of how I think…</p>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section style="border-top:1px solid rgba(0,0,0,.35);display:grid;grid-template-columns:clamp(80px,9vw,120px) 1fr;gap:clamp(20px,3vw,44px);padding:clamp(22px,2.4vw,32px) clamp(28px,4vw,56px) clamp(28px,3vw,44px);">
+      <div style="font-size:11px;letter-spacing:.08em;color:#26261f;padding-top:8px;">PRINCIPLES</div>
+      <p style="margin:0;max-width:900px;font-family:'Cutive Mono',ui-monospace,monospace;font-weight:700;font-size:clamp(24px,2.6vw,40px);line-height:1.15;letter-spacing:-0.01em;">Product design is also moving faster now. <span style="color:#d0491a;">With AI, shorter product bets, and faster engineering cycles, design has to stay closer to execution.</span> Roadmaps should stay tactical and close to reality. I design for user behavior, flow completion, and measurable product outcomes.</p>
+    </section>
+
+
+    <!-- FEATURES, AWARDS & PRESS -->
+    <section style="border-top:1px solid rgba(0,0,0,.35);display:grid;grid-template-columns:clamp(80px,9vw,120px) 1fr;gap:clamp(22px,2.4vw,34px) clamp(20px,3vw,44px);padding:clamp(22px,2.4vw,32px) clamp(28px,4vw,56px) clamp(60px,6vw,110px);">
+      <div style="font-size:11px;letter-spacing:.08em;color:#26261f;padding-top:4px;line-height:1.4;">ONE CASE</div>
+      <div style="display:flex;flex-direction:column;gap:clamp(18px,2vw,28px);min-width:0;">
+        <h3 style="margin:0;font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,34px);line-height:1.05;letter-spacing:-.01em;color:#26261f;">Cross-Border Invoicing Flow</h3>
+        <img src="assets/case-crossborder.png" alt="Cross-border invoicing flow — mobile screens" style="display:block;width:100%;aspect-ratio:1871/1397;object-fit:cover;border-radius:14px;">
+      </div>
+
+      <div style="font-size:11px;letter-spacing:.08em;color:#3a3a38;padding-top:4px;line-height:1.4;">CONTEXT</div>
+      <p style="margin:0;max-width:820px;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">We needed to design a cross-border invoicing flow for different countries, taking into account local legal requirements and different steps users need to complete.</p>
+
+      <div style="font-size:11px;letter-spacing:.08em;color:#3a3a38;padding-top:4px;line-height:1.4;">CONSTRAINTS</div>
+      <ul style="margin:0;padding-left:1.1em;max-width:820px;display:flex;flex-direction:column;gap:5px;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">
+        <li>Different legal requirements across countries</li>
+        <li>Complex forms and high effort for users</li>
+        <li>Risk of high cognitive load with many questions on one screen</li>
+      </ul>
+
+      <div style="font-size:11px;letter-spacing:.08em;color:#3a3a38;padding-top:4px;line-height:1.4;">DECISION</div>
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:820px;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">
+        <p style="margin:0;">I broke the flow into small, logical steps and adapted the questions to each jurisdiction.</p>
+        <p style="margin:0;">The main criteria were task completion and question clarity. We chose shorter forms instead of long screens with many questions to reduce cognitive load.</p>
+      </div>
+
+      <div style="font-size:11px;letter-spacing:.08em;color:#3a3a38;padding-top:4px;line-height:1.4;">OUTCOME</div>
+      <ul style="margin:0;padding-left:1.1em;max-width:820px;display:flex;flex-direction:column;gap:5px;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">
+        <li>95% task completion in pre-launch UX testing (n=15)</li>
+        <li>44 sec. for the first attempt without training</li>
+        <li>30 sec. for repeat attempts</li>
+        <li>Updated questions for the jurisdiction where one user had difficulties</li>
+        <li>Step-by-step structure made it easier to track analytics, find bugs, and improve individual steps without changing the whole flow</li>
+      </ul>
+
+      <div style="font-size:11px;letter-spacing:.08em;color:#3a3a38;padding-top:4px;line-height:1.4;">IMPACT</div>
+      <p style="margin:0;max-width:820px;font-size:clamp(14px,1.15vw,17px);line-height:1.4;color:#26261f;">A scalable flow that can be adapted to new jurisdictions and optimized step by step.</p>
+    </section>
+
+    <!-- SELECT CLIENTS -->
+    <section style="border-top:1px solid rgba(0,0,0,.35);display:grid;grid-template-columns:clamp(80px,9vw,120px) 1fr;gap:clamp(20px,3vw,44px);padding:clamp(22px,2.4vw,32px) clamp(28px,4vw,56px) clamp(28px,3vw,44px);">
+      <div style="font-size:11px;letter-spacing:.08em;color:#26261f;padding-top:4px;">BIOGRAPHY</div>
+      <div style="display:flex;flex-direction:column;gap:clamp(20px,2.2vw,32px);max-width:820px;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(15px,1.3vw,19px);line-height:1.2;color:#26261f;">
+            <span>2025–Now</span><span style="opacity:.45;">—</span><span>AI Product Designer</span>
+          </div>
+          <p style="margin:0;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">I work at the intersection of Product, Design, and AI. Today, AI is already part of my full product process — from research and hypothesis testing to fast shipping and product development.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(15px,1.3vw,19px);line-height:1.2;color:#26261f;">
+            <span>2021–2025</span><span style="opacity:.45;">—</span><span>Senior/Staff Product Designer</span>
+          </div>
+          <p style="margin:0;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">I moved into startups and FinTech, where there was a lot of uncertainty. I started working with the product as a whole: defining the problem, product goal, and user flow, and helping the team bring the solution to the product. I also started leading projects and designers.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(15px,1.3vw,19px);line-height:1.2;color:#26261f;">
+            <span>2016–2021</span><span style="opacity:.45;">—</span><span>Product Designer</span>
+          </div>
+          <p style="margin:0;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">I moved from communication design to Product Design and grew from Junior to Senior in 3.5 years. We shipped 100+ projects, and I moved from a generalist role to owning my own product stream. At the same time, the design team grew from 2 to 10 designers.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(15px,1.3vw,19px);line-height:1.2;color:#26261f;">
+            <span>2014–2016</span><span style="opacity:.45;">—</span><span>Communication Designer → IT</span>
+          </div>
+          <p style="margin:0;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">After several years in communication design, I saw that IT was developing much faster and that design could have a bigger impact on the product and the business. I gradually took more IT-related work and then moved into IT consulting.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(15px,1.3vw,19px);line-height:1.2;color:#26261f;">
+            <span>Before 2014</span><span style="opacity:.45;">—</span><span>Art → Design</span>
+          </div>
+          <p style="margin:0;font-size:clamp(13px,1.05vw,15.5px);line-height:1.5;">I spent many years doing art, and at some point decided that I wanted to become a designer. I studied design for 6 years, got my design degree, and started my career in communication design.</p>
+        </div>
+      </div>
+    </section>
+  
+
+    <footer style="border-top:1px solid rgba(0,0,0,.35);display:flex;justify-content:space-between;align-items:center;padding:clamp(18px,2vw,26px) clamp(28px,4vw,56px);font-size:12px;letter-spacing:.04em;color:#3a3a38;flex-wrap:wrap;gap:12px;">
+      <span>DARIA BODAIKINA</span>
+      <div style="display:flex;align-items:center;gap:clamp(14px,1.6vw,24px);">
+        <a href="mailto:d.bodaikina@gmail.com" style="color:#3a3a38;">D.BODAIKINA@GMAIL.COM</a>
+        <a href="https://t.me/bodaikina" style="color:#3a3a38;">TELEGRAM: @BODAIKINA</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===================== RIGHT — fixed / static ===================== -->
+  <div style="flex:0 0 clamp(340px,44vw,660px);height:100%;display:flex;border-left:1px solid rgba(0,0,0,.28);">
+
+    <!-- Featured project column -->
+    <div style="flex:1 1 auto;min-width:0;height:100%;display:flex;flex-direction:column;padding:clamp(16px,1.6vw,22px) clamp(18px,1.8vw,26px);gap:clamp(10px,1.4vw,16px);">
+      <div style="display:flex;flex-direction:column;">
+        <span style="font-size:clamp(22px,2.2vw,30px);font-weight:500;line-height:1.05;">Daria</span>
+        <span style="font-family:'Cutive Mono',ui-monospace,monospace;font-size:clamp(22px,2.2vw,30px);line-height:1.15;">Bodaikina</span>
+      </div>
+
+      <image-slot id="featured" style="flex:1 1 0;min-height:0;width:100%;display:block;" shape="rounded" radius="2" fit="cover" position="50% 0%" placeholder="Drop featured image"></image-slot>
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:13px;">
+        <span>Creative AI Product Designer,Staff-level Product Designer with 8+ years in teams</span>
+      </div>
+      <p style="margin:0;font-size:13.5px;line-height:1.45;color:#26261f;">I work and designing complex, data-heavy interfaces — banking systems, transaction and approval workflows, multi-role B2B platforms; operate at the intersection of architecture, UX, and product strategy: deciding where a system should act proactively and where the user must stay in control</p>
+    </div>
+
+    <!-- Image archive column -->
+    <div style="flex:0 0 clamp(120px,13vw,208px);height:100%;display:flex;flex-direction:column;">
+      <div style="flex:1 1 auto;min-height:0;display:flex;flex-direction:column;padding:clamp(14px,1.4vw,20px) 8px 8px;gap:8px;">
+        <image-slot id="arch1" style="flex:1 1 0;min-height:0;width:100%;display:block;--slot-frame-bg:#edeff3;" shape="rounded" radius="2" fit="contain" position="50% 50%" placeholder="Image"></image-slot>
+        <image-slot id="arch2" style="flex:1 1 0;min-height:0;width:100%;display:block;" shape="rounded" radius="2" fit="cover" position="50% 50%" placeholder="Image"></image-slot>
+        <image-slot id="arch3" style="flex:1 1 0;min-height:0;width:100%;display:block;" shape="rounded" radius="2" fit="cover" position="50% 50%" placeholder="Image"></image-slot>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whaleCursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Whale cursor&quot;},&quot;whaleSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:76,&quot;min&quot;:40,&quot;max&quot;:160,&quot;step&quot;:2,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Whale cursor&quot;},&quot;tailEnergy&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1.5,&quot;min&quot;:0.3,&quot;max&quot;:2.2,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Whale cursor&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.whaleRef = React.createRef();
+    this.innerRef = React.createRef();
+    this.tailRef = React.createRef();
+  }
+
+  renderVals() {
+    return { whaleRef: this.whaleRef, innerRef: this.innerRef, tailRef: this.tailRef };
+  }
+
+  _syncEnabled() {
+    document.documentElement.toggleAttribute('data-whale-off', this.props.whaleCursor === false);
+  }
+
+  componentDidUpdate() { this._syncEnabled(); }
+
+  componentDidMount() {
+    const root = this.whaleRef.current, inner = this.innerRef.current, tail = this.tailRef.current;
+    if (!root || !inner || !tail) return;
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    // The cursor sits under the pointer, so an editing host always hit-tests it
+    // first. Turning the tweak off hides it (and restores the native cursor).
+    this._syncEnabled();
+    if (this.props.whaleCursor === false) return;
+
+    let tx = window.innerWidth * 0.5, ty = window.innerHeight * 0.5;
+    let x = tx, y = ty, phase = 0, wag = 0, dir = -1, lastSize = 0, last = performance.now();
+
+    this._onMove = (e) => { tx = e.clientX; ty = e.clientY; };
+    window.addEventListener('pointermove', this._onMove, { passive: true });
+
+    const loop = (t) => {
+      const dt = Math.min(3, Math.max(0.2, (t - last) / 16.67));
+      last = t;
+
+      const size = this.props.whaleSize ?? 76;
+      if (size !== lastSize) {
+        lastSize = size;
+        inner.style.width = size + 'px';
+        inner.style.height = size * 0.798 + 'px';
+      }
+
+      const px = x, py = y;
+      x += (tx - x) * Math.min(1, 0.17 * dt);
+      y += (ty - y) * Math.min(1, 0.17 * dt);
+      const vx = x - px, vy = y - py;
+      const speed = Math.hypot(vx, vy);
+
+      // tail wag amplitude + frequency track pointer speed
+      wag += (Math.min(1, speed / 10) - wag) * Math.min(1, 0.1 * dt);
+      const energy = this.props.tailEnergy ?? 1;
+      phase += (0.09 + wag * 0.34) * dt * energy;
+      const amp = (3 + wag * 17) * energy;
+
+      if (Math.abs(vx) > 0.4) dir = vx > 0 ? 1 : -1;
+      const flip = dir === 1 ? -1 : 1;
+      const tilt = Math.max(-14, Math.min(14, vy * 1.4)) * flip;
+      const hotspotX = dir === 1 ? size * 0.97 : size * 0.03;
+
+      root.style.transform = 'translate3d(' + (x - hotspotX) + 'px,' + (y - size * 0.268) + 'px,0)';
+      inner.style.transform = 'scaleX(' + flip + ') rotate(' + tilt + 'deg)';
+      tail.style.transform = 'rotate(' + (Math.sin(phase) * amp) + 'deg)';
+
+      this._raf = requestAnimationFrame(loop);
+    };
+    this._raf = requestAnimationFrame(loop);
+  }
+
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._onMove) window.removeEventListener('pointermove', this._onMove);
+  }
+}
+</script>
+</body>
+</html>
